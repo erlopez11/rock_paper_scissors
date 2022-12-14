@@ -1,6 +1,6 @@
 //Player Selection
 
-const getplayerSelection = (playerChoice) => {
+const getPlayerSelection = (playerChoice) => {
     playerChoice = playerChoice.toLowerCase();
     
     if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
@@ -10,7 +10,7 @@ const getplayerSelection = (playerChoice) => {
     }
 }
 
-getplayerSelection('RoCk');
+
 
 //Computer Selection
 
@@ -28,3 +28,33 @@ const getComputerSelection = () => {
             break;
     }
 }
+
+
+//Round of Play
+
+const playRound = (playerSelection, computerSelection) => {
+
+    if (playerSelection === computerSelection) {
+        return 'It\s a tie!';
+    } 
+    if (playerSelection === 'rock') {
+        if (computerSelection === 'paper') {
+            return 'You lost. Paper beats rock.';
+        } else {
+            return 'You won! Rock beats scissors!';
+        }
+    } if (playerSelection === 'paper') {
+        if (computerSelection === 'scissors') {
+            return 'You lost. Scissors beats paper.';
+        } else {
+            return 'You won! Paper beats rock!';
+        }
+    } if (playerSelection === 'scissors') {
+        if (computerSelection === 'rock') {
+            return 'You lost. Rock beats scissors.';
+        } else {
+            return 'You won! Scissors beats paper!';
+        }
+    } 
+}
+
