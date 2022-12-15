@@ -1,7 +1,10 @@
 //Player Selection
 
+
+
 const getPlayerSelection = (playerChoice) => {
-    playerChoice = playerChoice.toLowerCase();
+    
+     playerChoice = prompt("Rock, paper, or scirros?").toLowerCase();
     
     if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
         return playerChoice;
@@ -61,7 +64,7 @@ const playRound = (playerSelection, computerSelection) => {
 //The Game
 
 const playGame = () => {
-    let playerSelection = getPlayerSelection('Rock');
+    let playerSelection = getPlayerSelection();
     let computerSelection = getComputerSelection();
     console.log(`you threw ${playerSelection}.`);
     console.log(`the computer threw ${computerSelection}.`);
