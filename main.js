@@ -4,11 +4,11 @@ const getPlayerSelection = (playerChoice) => {
     playerChoice = playerChoice.toLowerCase();
     
     if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
-        return console.log(playerChoice);
+        return playerChoice;
     } else {
         console.log('Invalid Selection.');
     }
-}
+};
 
 
 
@@ -27,7 +27,7 @@ const getComputerSelection = () => {
             return 'scissors'
             break;
     }
-}
+};
 
 
 //Round of Play
@@ -56,5 +56,17 @@ const playRound = (playerSelection, computerSelection) => {
             return 'You won! Scissors beats paper!';
         }
     } 
-}
+};
+
+//The Game
+
+const playGame = () => {
+    let playerSelection = getPlayerSelection('Rock');
+    let computerSelection = getComputerSelection();
+    console.log(`you threw ${playerSelection}.`);
+    console.log(`the computer threw ${computerSelection}.`);
+    console.log(playRound(playerSelection, computerSelection));
+};
+
+playGame();
 
