@@ -1,9 +1,9 @@
 let playerScore = 0;
 let computerScore = 0;
-
+//add a section for displaying the round number out of 5
 
 //Player Selection
-const getPlayerSelection = (playerChoice) => {
+function getPlayerSelection(playerChoice) {
     
      playerChoice = prompt("Rock, paper, or scissors?").toLowerCase();
     
@@ -18,7 +18,7 @@ const getPlayerSelection = (playerChoice) => {
 
 //Computer Selection
 
-const getComputerSelection = () => {
+function getComputerSelection() {
     let computerChoice = Math.floor(Math.random()* 3);
     switch (computerChoice) {
         case 0:
@@ -36,7 +36,7 @@ const getComputerSelection = () => {
 
 //Round of Play
 
-const playRound = (playerSelection, computerSelection) => {
+function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === computerSelection) {
         return 'It\s a tie!';
@@ -70,15 +70,23 @@ const playRound = (playerSelection, computerSelection) => {
 
 //The Game
 
-const playGame = () => {
+function playGame() {
     for (let i = 0; i < 5; i++) {
       let playerSelection = getPlayerSelection();
       let computerSelection = getComputerSelection();
       console.log(`you threw ${playerSelection}.`);
       console.log(`the computer threw ${computerSelection}.`);
       console.log(playRound(playerSelection, computerSelection));
-      console.log(`Player:' ${playerScore}`);
+      console.log(`Player: ${playerScore}`);
       console.log(`Computer: ${computerScore}`);
+    }
+
+    if (playerScore > computerScore) {
+        console.log('Congratulations! You won the game!');
+    } else if (playerScore < computerScore) {
+        console.log('The computer won. Better luck next time. :/');
+    } else {
+        console.log('It\'s a tie!');
     }
 };
 
