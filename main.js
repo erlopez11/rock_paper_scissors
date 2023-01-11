@@ -1,11 +1,11 @@
-
 let playerScore = 0;
 let computerScore = 0;
+
 
 //Player Selection
 const getPlayerSelection = (playerChoice) => {
     
-     playerChoice = prompt("Rock, paper, or scirros?").toLowerCase();
+     playerChoice = prompt("Rock, paper, or scissors?").toLowerCase();
     
     if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
         return playerChoice;
@@ -43,27 +43,27 @@ const playRound = (playerSelection, computerSelection) => {
     } 
     if (playerSelection === 'rock') {
         if (computerSelection === 'paper') {
+            computerScore++;
             return 'You lost. Paper beats rock.';
-            computerScore ++;
         } else {
+            playerScore++;
             return 'You won! Rock beats scissors!';
-            playerScore ++;
         }
     } if (playerSelection === 'paper') {
         if (computerSelection === 'scissors') {
+            computerScore++;
             return 'You lost. Scissors beats paper.';
-            computerScore ++;
         } else {
+            playerScore++
             return 'You won! Paper beats rock!';
-            playerScore ++;
         }
     } if (playerSelection === 'scissors') {
         if (computerSelection === 'rock') {
+            computerScore++
             return 'You lost. Rock beats scissors.';
-            computerScore ++;
         } else {
+            playerScore++;
             return 'You won! Scissors beats paper!';
-            playerScore ++;
         }
     } 
   };
@@ -77,11 +77,11 @@ const playGame = () => {
       console.log(`you threw ${playerSelection}.`);
       console.log(`the computer threw ${computerSelection}.`);
       console.log(playRound(playerSelection, computerSelection));
+      console.log(`Player:' ${playerScore}`);
+      console.log(`Computer: ${computerScore}`);
     }
 };
 
-console.log('Player:' + playerScore);
-console.log('Computer:' + computerScore);
 
 playGame();
 
