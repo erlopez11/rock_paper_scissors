@@ -23,7 +23,15 @@ body {
 
 /* Ttitle */
 
-
+h1 {
+    font-size: 2.25em;
+    background-color: #E8B7D4;
+    width: 150px;
+    color: #33539E;
+    position: relative;
+    left: -10px;
+    top: -22px;
+}
 
 
 
