@@ -29,8 +29,8 @@ h1 {
     width: 150px;
     color: #33539E;
     position: relative;
-    left: -10px;
-    top: -22px;
+    left: -0.62em;
+    top: -1.37em;
 }
 
 /* Info Section */
@@ -40,22 +40,55 @@ h1 {
     display: grid;
     place-items: center;
     margin: -4.27em 31.25em 0 31.25em;
-    color: #33539E;
 }
 
 h2 {
     font-size: 2.81em;
+    color: #33539E;
 }
 
-.info p {
-    font-size: 30px;
+p {
+    font-size: 1.87em;
     margin-top: 1em;
+    color: #33539E;
 }
 
 /*Buttons */
+
+.buttons_container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 6.25em;
+    /*margin-left: 12.5em;
+    margin-right: 12.5em;*/
+}
+
+button {
+    background-color: #33539E;
+    border: none;
+    border-radius: 0.37em;
+    width: 15.62em;
+    max-width: 100%;
+    padding: 0.93em;
+}
+
+button span {
+    color: #D9D9D9;
+    font-size: 1.5em;
+}
+
 button img {
-    width: 173px;
-    height: 148px;
+    width: 10.81em;
+    height: auto;
+}
+
+/* Score and Outcomes */
+
+.score-box {
+    border: 1px solid #33539E;
+    width: 772px;
+    max-width: 100%;
+    padding: 15px;
 }
 
 
@@ -63,4 +96,8 @@ button img {
 .plants img {
     width: 330px;
     height: auto;
+}
+
+.right_img {
+    float: right;
 }
