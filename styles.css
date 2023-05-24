@@ -21,7 +21,7 @@ body {
     width: auto;
 }
 
-/* Ttitle */
+/* Title */
 
 h1 {
     font-size: 2.25em;
@@ -33,7 +33,24 @@ h1 {
     top: -22px;
 }
 
+/* Info Section */
 
+.info {
+    width: 50%;
+    display: grid;
+    place-items: center;
+    margin: -4.27em 31.25em 0 31.25em;
+    color: #33539E;
+}
+
+h2 {
+    font-size: 2.81em;
+}
+
+.info p {
+    font-size: 30px;
+    margin-top: 1em;
+}
 
 /*Buttons */
 button img {
