@@ -84,11 +84,23 @@ button img {
 
 /* Score and Outcomes */
 
+.score-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
 .score-box {
     border: 1px solid #33539E;
     width: 772px;
     max-width: 100%;
     padding: 15px;
+    display: grid;
+    place-items: center;
+}
+
+.score-box p {
+    text-align: center;
 }
 
 
