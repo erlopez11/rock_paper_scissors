@@ -85,14 +85,14 @@ button img {
 .score-container {
     display: flex;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 6.25em;
 }
 
 .score-box {
     border: 1px solid #33539E;
-    width: 772px;
+    width: 48.25em;
     max-width: 100%;
-    padding: 15px;
+    padding: 0.93em;
     display: grid;
     place-items: center;
 }
@@ -106,7 +106,7 @@ button img {
 .plants {
     display: flex;
     justify-content: space-between;
-    margin-top: -350px;
+    margin-top: -21.87em;
 }
 
 .plants img {
