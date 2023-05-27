@@ -11,14 +11,15 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-image: linear-gradient(#E8B7D4 40%, #BFB8DA);
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
+    border: 1px solid red;
 }
 
 .white-border {
     border: 0.62em solid #D9D9D9;
     margin: 3em;
-    height: auto;
-    width: auto;
+    height: 98%;
 }
 
 /* Title */
@@ -26,7 +27,7 @@ body {
 h1 {
     font-size: 2.25em;
     background-color: #E8B7D4;
-    width: 150px;
+    width: 9.37em;
     color: #33539E;
     position: relative;
     left: -0.62em;
@@ -36,10 +37,9 @@ h1 {
 /* Info Section */
 
 .info {
-    width: 50%;
-    display: grid;
-    place-items: center;
-    margin: -7.27em 31.25em 0 31.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h2 {
@@ -111,4 +111,68 @@ button img {
 
 .plants img {
     width: 26%;
+}
+
+/* Media Queries*/
+
+/* Mobile */
+@media only screen and (max-width: 400px) {
+
+    .white-border {
+        margin: 0.75em;
+        border: 0.37em solid #D9D9D9;
+    }
+
+    h1 {
+        font-size: 0.87em;
+        width: 4em;
+        left: -0.40em;
+        top: -0.75em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.75em;
+        text-align: center;
+    }
+
+    /* Left off here, continue styles below*/
+
+    .buttons_container {
+        margin: 50px;
+        gap: 20px;
+    }
+
+    button {
+        width: 5.89em;
+        padding: 0.75em;
+    }
+
+    button img {
+        width: 2.7em;
+    }
+
+    button span {
+        font-size: 0.75em;
+        text-align: center;
+    }
+
+    .score-container {
+        margin: 0;
+    }
+
+    .score-box {
+        width: 12.06em;
+    }
+
+    .plants img {
+        width: 50%;
+    }
+
+    .plants {
+        margin-top: 15px;
+    }
 }
