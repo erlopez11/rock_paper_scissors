@@ -181,3 +181,61 @@ button img {
 }
 
 /* Tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .white-border {
+        margin: 1em;
+    }
+
+    h1 {
+        font-size: 1.25em;
+        width: 4em;
+    }
+
+    .info {
+        margin-top: 0.625em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+    
+    .buttons_container {
+        margin: 4.12em;
+        gap: 1.5em;
+    }
+
+    button {
+        width: 7.81em;
+        padding: 0.75em;
+    }
+
+    button img {
+        width: 5.40em;
+    }
+
+    button span {
+        font-size: 1.25em;
+        text-align: center;
+    }
+
+    .score-container {
+        margin: 0;
+    }
+
+    .score-box {
+        width: 24.12em;
+    }
+
+    .plants img {
+        width: 50%;
+    }
+
+    .plants {
+        justify-content: center;
+    }
+
+}
