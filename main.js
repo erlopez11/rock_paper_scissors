@@ -11,6 +11,7 @@ const roundOutcome = document.querySelector('.round-outcome');
 const winner = document.querySelector('.winner');
 const youFinal = document.querySelector('.you-final');
 const compFinal = document.querySelector('.comp-final');
+const overlay = document.querySelector('.overlay');
 const restartBtn = document.querySelector('.restart');
 //add a section for displaying the round number out of 5
 
