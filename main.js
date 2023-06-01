@@ -1,3 +1,4 @@
+
 let playerScore = 0;
 let computerScore = 0;
 
@@ -5,7 +6,12 @@ const rockBtn = document.querySelector('.rock');
 const paperBtn = document.querySelector('.paper');
 const scissorsBtn = document.querySelector('.scissors');
 const youScore = document.querySelector('.you-score');
-const compScore = documnet.querySelector('.comp-score');
+const compScore = document.querySelector('.comp-score');
+const roundOutcome = document.querySelector('.round-outcome');
+const winner = document.querySelector('.winner');
+const youFinal = document.querySelector('.you-final');
+const compFinal = document.querySelector('.comp-final');
+const restartBtn = document.querySelector('.restart');
 //add a section for displaying the round number out of 5
 
 /*Player Selection
@@ -45,31 +51,31 @@ function getComputerSelection() {
 function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === computerSelection) {
-        return 'It\s a tie!';
+        roundOutcome.textContent = 'It\s a tie!';
     } 
     if (playerSelection === 'rock') {
         if (computerSelection === 'paper') {
             computerScore++;
-            return 'You lost. Paper beats rock.';
+            roundOutcome.textcontent = "You lost. <br> Computer chose paper!";
         } else {
             playerScore++;
-            return 'You won! Rock beats scissors!';
+            roundOutcome.textContent = "You won! <br> Computer chose scissors!";
         }
     } if (playerSelection === 'paper') {
         if (computerSelection === 'scissors') {
             computerScore++;
-            return 'You lost. Scissors beats paper.';
+            roundOutcome.textContent = "You lost. Computer chose scissors!";
         } else {
             playerScore++
-            return 'You won! Paper beats rock!';
+            roundOutcome.textContent = "You won! Computer chose rock!";
         }
     } if (playerSelection === 'scissors') {
         if (computerSelection === 'rock') {
             computerScore++
-            return 'You lost. Rock beats scissors.';
+            roundOutcome.textContent = "You lost. Computer chose rock!";
         } else {
             playerScore++;
-            return 'You won! Scissors beats paper!';
+            roundOutcome.textContent = "You won! Computer chose paper!";
         }
     } 
   };
@@ -81,30 +87,44 @@ function playRound(playerSelection, computerSelection) {
     compScore.textContent = `Computer: ${computerScore}`;
   }
 
+// End Game
+
+function endGame() {
+    if (playerScore === 5 || computerScore === 5) {
+        overlay.style.display = "flex";
+        youFinal.textContent = `You: ${playerScore}`;
+        compFinal.textContent = `Computer: ${computerScore}`;
+        if (playerScore > computerScore) {
+            winner.textContent = "Congratulations, you won!";
+        } else {
+            winner.textContent = "Too bad, you lost.";
+        }
+    }
+}
+
 //The Game
 
-function playGame() {
-    for (let i = 0; i < 5; i++) {
-      let playerSelection = getPlayerSelection();
-      let computerSelection = getComputerSelection();
-      console.log(`you threw ${playerSelection}.`);
-      console.log(`the computer threw ${computerSelection}.`);
-      console.log(playRound(playerSelection, computerSelection));
-      console.log(`Player: ${playerScore}`);
-      console.log(`Computer: ${computerScore}`);
-    }
+rockBtn.addEventListener('click', () => playGame('rock'));
+paperBtn.addEventListener('click', () => playGame('paper'));
+scissorsBtn.addEventListener('click', () => playGame('scissors'));
 
-    if (playerScore > computerScore) {
-        console.log('Congratulations! You won the game!');
-    } else if (playerScore < computerScore) {
-        console.log('The computer won. Better luck next time. :/');
-    } else {
-        console.log('It\'s a tie!');
-    }
+function playGame(playerSelect) {
+   let computerSelection = getComputerSelection();
+   playRound(playerSelect, computerSelection);
+   updateScore();
+   endGame();
 };
 
-
-playGame();
+// Restart 
+restartBtn.addEventListener('click', restartGame);
+function restartGame() {
+    overlay.style.display = 'none';
+    playerScore = 0;
+    computerScore = 0;
+    youScore.textContent = `You: ${playerScore}`;
+    compScore.textContent = `Computer: ${computerScore}`;
+    roundOutcome.textContent = "Who will win?";
+}
 
 
 
