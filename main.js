@@ -1,8 +1,14 @@
 let playerScore = 0;
 let computerScore = 0;
+
+const rockBtn = document.querySelector('.rock');
+const paperBtn = document.querySelector('.paper');
+const scissorsBtn = document.querySelector('.scissors');
+const youScore = document.querySelector('.you-score');
+const compScore = documnet.querySelector('.comp-score');
 //add a section for displaying the round number out of 5
 
-//Player Selection
+/*Player Selection
 function getPlayerSelection(playerChoice) {
     
      playerChoice = prompt("Rock, paper, or scissors?").toLowerCase();
@@ -12,7 +18,7 @@ function getPlayerSelection(playerChoice) {
     } else {
         console.log('Invalid Selection.');
     }
-};
+};*/
 
 
 
@@ -67,6 +73,13 @@ function playRound(playerSelection, computerSelection) {
         }
     } 
   };
+
+  // Score Function
+
+  function updateScore() {
+    youScore.textContent = `You: ${playerScore}`;
+    compScore.textContent = `Computer: ${computerScore}`;
+  }
 
 //The Game
 
