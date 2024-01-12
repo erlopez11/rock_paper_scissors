@@ -5,7 +5,7 @@ This is a rock, paper, scissors game created as a project for The Odin Project.
 
 
 # Description
-This is a project I created as an assignment for The Odin Project's foundations course. It is a rock, paper, scissors game played between the user and the computer. The first to score five points wins the game.
+This is a project I created as an assignment for The Odin Project's foundations course. It is a rock, paper, scissors game played between the user and the computer. The first to score five points wins the game. This game was created using HTML, CSS, and JavaScript.
 
 # Design
 I created the illustarions used in this game to represent the three different option selections, so that a visual of the selection could be proved alongside the text. The site is made up of a single page containing instructions on how to win the game, the three selection buttons, as well as a score box tallying up points accumulated. Once one of the players reaches a score of five, an overlay appears announcing the winner, the final score, and an option to play again. This game is played against the computer; there is a function within the code that returns a random sleection of three options as the computer's choice.
