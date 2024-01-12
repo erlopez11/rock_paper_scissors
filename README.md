@@ -1,11 +1,17 @@
 # rock_paper_scissors
 This is a rock, paper, scissors game created as a project for The Odin Project.
 
+<img width="1417" alt="RPS Sample" src="https://github.com/erlopez11/rock_paper_scissors/assets/101296798/7ceaa5b3-11e7-4bc0-8f74-e90beaf8f824">
+
+
 # Description
 This is a project I created as an assignment for The Odin Project's foundations course. It is a rock, paper, scissors game played between the user and the computer. The first to score five points wins the game.
 
 # Design
 I created the illustarions used in this game to represent the three different option selections, so that a visual of the selection could be proved alongside the text. The site is made up of a single page containing instructions on how to win the game, the three selection buttons, as well as a score box tallying up points accumulated. Once one of the players reaches a score of five, an overlay appears announcing the winner, the final score, and an option to play again. This game is played against the computer; there is a function within the code that returns a random sleection of three options as the computer's choice.
+
+<img width="939" alt="RPS Figma" src="https://github.com/erlopez11/rock_paper_scissors/assets/101296798/6727bf45-5555-4d65-9f05-bcc240d61628">
+
 
 # Challenges
 I was familiar with the type of code I would have to write in order to get the game to work, since I had previously constructed a rock, paper, scissors game for one Codecademy's lesson projects. But at this stage, I only knew how to get the game to play using chrome's developer tool to display the game's quetion, make a typed selection, and present a winner. The game was only made up of one round. The game didn't have any html or css elements, the ability to display the sections made, or keep track of a score until a specific number was reached. While I had been introduced to DOM manipuation and event handlers, I still had difficulties pituring how to get the javascript code to link to html and css elements in order to create visually appealing site that allowed for interaction. I didn't understand how to add an event handler to three seperate buttons, have to score display change based on who was getting the points, or how to display that final end game message.  So, I left the project alone for a while and built smaller games including a tetris game (by follomwing a tutorial) and a scrabble game (Harvard CS50 assignment) where I was able to finally make that connection between linking the javascript, html, and css.
